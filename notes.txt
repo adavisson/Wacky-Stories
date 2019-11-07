@@ -1,0 +1,27 @@
+Madlibs
+---------
+- Use https://madlibz.herokuapp.com/api as an example
+- Allow users to save stories they like
+- Models:
+  - Users:
+      //has_many :solutions
+      First Name: String
+      Last Name: String
+      username: String
+      email: String, validate
+      password: {bcrypt}
+  - Template:
+      //has_many :solutions
+      title: String
+      story: Array of strings
+      blanks: Array of strings describing what needs to be filled in
+  - Solution:
+      //belongs_to :template
+      //belongs_to :user
+      title: String
+      template_id: integer
+      user_id: integer
+      words: Array of strings
+- Remember to use validations in models where appropriate
+- What would routing look like?
+- Any tools for mapping out React component flow?
