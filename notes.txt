@@ -7,13 +7,13 @@ Madlibs
       //has_many :solutions
       First Name: String
       Last Name: String
-      username: String
+      username: String, unique
       email: String, validate
       password: {bcrypt}
   - Template:
       //has_many :solutions
       title: String
-      story: Array of strings
+      story: Array of strings //Use serialize?
       blanks: Array of strings describing what needs to be filled in
   - Solution:
       //belongs_to :template
@@ -25,3 +25,4 @@ Madlibs
 - Remember to use validations in models where appropriate
 - What would routing look like?
 - Any tools for mapping out React component flow?
+- Look on Learn Instruct for react-router help
