@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  template_id: 1
+  words: MyText
+
+two:
+  title: MyString
+  template_id: 1
+  words: MyText

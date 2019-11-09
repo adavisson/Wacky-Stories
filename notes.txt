@@ -14,7 +14,7 @@ Madlibs
       //has_many :solutions
       title: String
       story: Array of strings //Use serialize?
-      blanks: Array of strings describing what needs to be filled in
+      hints: Array of strings describing what needs to be filled in
   - Solution:
       //belongs_to :template
       //belongs_to :user
