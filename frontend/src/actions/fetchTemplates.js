@@ -1,4 +1,4 @@
-const fetchTemplates = () => {
+export const fetchTemplates = () => {
   return (dispatch) => {
     dispatch({type: 'LOADING_TEMPLATES'})
     fetch('http://localhost:3000/templates')
@@ -8,5 +8,3 @@ const fetchTemplates = () => {
       });
   };
 }
- 
-export default fetchTemplates;
