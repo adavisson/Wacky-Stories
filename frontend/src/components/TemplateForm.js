@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import Template from './Template';
 
 class TemplateForm extends Component {
   state = {
-    value: ''
+    value: null
   }
 
   handleChange = event => {
@@ -16,15 +17,18 @@ class TemplateForm extends Component {
 
   render() { 
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>Select Template:
-          <select value={this.state.value} onChange={this.handleChange}>
-            {this.props.templates.map(template => <option value={template.title}>{template.title}</option>)}
-          </select>
-        </label>
-        <br/>
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <label>Select Template:
+            <select value={this.state.value} onChange={this.handleChange}>
+              <option value="null">Select</option>
+              {this.props.templates.map(template => <option value={template.id}>{template.title}</option>)}
+            </select>
+          </label>
+          <br/>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
     );
   }
 }

@@ -4,6 +4,7 @@ const Template = (props) => {
   return (
     <div>
       {console.log(props.template)}
+      {/* <h2>{props.template.title}</h2> */}
     </div>
   );
 }
