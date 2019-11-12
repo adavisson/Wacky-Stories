@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Template from '../components/Template';
+import TemplateForm from '../components/TemplateForm';
 import { connect } from 'react-redux';
 import { fetchTemplates } from '../actions/fetchTemplates';
 
@@ -12,7 +13,8 @@ class TemplateContainer extends Component {
   render() { 
     return (
       <div>
-        <Template templates={this.props.templates} />
+        <TemplateForm templates={this.props.templates} />
+        {/* <Template template={this.props.templates[0]} /> */}
       </div>
     );
   }

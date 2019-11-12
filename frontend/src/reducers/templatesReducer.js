@@ -6,7 +6,7 @@ const templatesReducer = (state = { templates: [], loading: false}, action) => {
         templates: [...state.templates],
         loading: true
       }
-    case 'ADD_CATS':
+    case 'ADD_TEMPLATES':
       return {
         ...state,
         templates: action.templates,

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-const Template = () => {
+const Template = (props) => {
   return (
     <div>
-      <h3>Rendered</h3>
+      {console.log(props.template)}
     </div>
   );
 }
