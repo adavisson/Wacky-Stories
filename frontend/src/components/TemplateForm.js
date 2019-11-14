@@ -28,7 +28,7 @@ class TemplateForm extends Component {
 
   renderForm = () => {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="templateForm" onSubmit={this.handleSubmit}>
         <label>Select Template: &nbsp;
           <select value={this.state.value} onChange={this.handleChange}>
             <option value="null">Select</option>
@@ -51,7 +51,7 @@ class TemplateForm extends Component {
     return (
       <div className="template">
         <Template template={template} />
-        <button className="btn btn-primary" onClick={this.handleButton}>Select Another Template</button>
+        <button className="btn btn-link" onClick={this.handleButton}>Select Another Template</button>
       </div>
     )
   }
