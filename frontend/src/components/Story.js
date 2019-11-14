@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
 class Story extends Component {
-  // state = {  }
-
   renderStory = () => {
     console.log(this.props)
     return(

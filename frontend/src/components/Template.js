@@ -23,12 +23,13 @@ class Template extends Component {
 
   renderForm = () => {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="form-div" onSubmit={this.handleSubmit}>
         {this.props.template.hints.map((hint, index) => {
           return (
             <div className="form-group">
               <label>{hint} &nbsp;</label>
               <input
+                className="form-control"
                 id={`word_${index}`}
                 type="text"
                 value={this.state.values[index]}
