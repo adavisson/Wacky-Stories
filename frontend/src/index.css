@@ -23,3 +23,8 @@ form {
   display: inline-block;
   width: 50%;
 }
+
+.story {
+  display: inline-block;
+  width: 65%;
+}
