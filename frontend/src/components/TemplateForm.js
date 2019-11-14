@@ -26,7 +26,7 @@ class TemplateForm extends Component {
             </select>
           </label>
           <br/>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" className="btn btn-primary" />
         </form>
       </div>
     );
