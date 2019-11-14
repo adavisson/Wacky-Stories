@@ -13,7 +13,7 @@ class TemplateForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    if (this.state.value){
+    if (this.state.value != "null"){
       this.setState({
         isSubmitted: true
       })
