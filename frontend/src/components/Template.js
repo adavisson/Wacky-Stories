@@ -49,7 +49,7 @@ class Template extends Component {
         {/* {console.log(props.template)} */}
         <h2>{this.props.template.title}</h2>
         {!this.state.isSubmitted && this.renderForm()}
-        {this.state.isSubmitted && <Story words={this.state.values} template={this.props.template} />}
+        {this.state.isSubmitted && <Story words={Object.values(this.state.values)} template={this.props.template} />}
         {console.log(this.state)}
         <br />
       </div>
