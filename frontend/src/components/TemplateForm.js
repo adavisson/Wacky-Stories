@@ -20,23 +20,40 @@ class TemplateForm extends Component {
     }
   }
 
+  handleButton = event => {
+    this.setState({
+      isSubmitted: false
+    })
+  }
+
+  renderForm = () => {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>Select Template: &nbsp;
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="null">Select</option>
+            {this.props.templates.map(template => <option value={template.id}>{template.title}</option>)}
+          </select>
+        </label>
+        <br/>
+        <input type="submit" value="Submit" className="btn btn-primary" />
+      </form>
+    );
+  }
+
   renderTemplate = () => {
-    return <Template template_id={this.state.value} />
+    return (
+      <div>
+        <Template template_id={this.state.value} />
+        <button className="btn btn-primary" onClick={this.handleButton}>Select Another Template</button>
+      </div>
+    )
   }
 
   render() { 
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
-          <label>Select Template: &nbsp;
-            <select value={this.state.value} onChange={this.handleChange}>
-              <option value="null">Select</option>
-              {this.props.templates.map(template => <option value={template.id}>{template.title}</option>)}
-            </select>
-          </label>
-          <br/>
-          <input type="submit" value="Submit" className="btn btn-primary" />
-        </form>
+        {!this.state.isSubmitted && this.renderForm()}
         {this.state.isSubmitted && this.renderTemplate()}
       </div>
     );
