@@ -1,13 +1,17 @@
 import React, { Component } from "react";
+import Story from './Story';
 
 class Template extends Component {
   state = {
+    isSubmitted: false,
     values: {}
   };
 
   handleSubmit = event => {
     event.preventDefault();
-    alert("Submitted!");
+    this.setState({
+      isSubmitted: true
+    })
   };
 
   handleChange = event => {
@@ -29,6 +33,7 @@ class Template extends Component {
                 type="text"
                 value={this.state.values[index]}
                 onChange={this.handleChange}
+                required
               />
             </div>
           );
@@ -43,7 +48,8 @@ class Template extends Component {
       <div>
         {/* {console.log(props.template)} */}
         <h2>{this.props.template.title}</h2>
-        {this.renderForm()}
+        {!this.state.isSubmitted && this.renderForm()}
+        {this.state.isSubmitted && <Story words={this.state.values} template={this.props.template} />}
         {console.log(this.state)}
         <br />
       </div>
