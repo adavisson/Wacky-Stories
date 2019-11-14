@@ -42,9 +42,15 @@ class TemplateForm extends Component {
   }
 
   renderTemplate = () => {
+    let template;
+    this.props.templates.forEach(temp => {
+      if (temp.id == this.state.value){
+        template = temp;
+      }
+    })
     return (
-      <div>
-        <Template template_id={this.state.value} />
+      <div className="template">
+        <Template template={template} />
         <button className="btn btn-primary" onClick={this.handleButton}>Select Another Template</button>
       </div>
     )
