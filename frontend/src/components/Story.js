@@ -8,9 +8,15 @@ class Story extends Component {
     return(
       <>
       {this.props.template.story.map((string, index) => {
-        return(
-          `${string}` + `${this.props.words[index]}`
-        )
+        if(string && this.props.words[index]){
+          return(
+            `${string}` + `${this.props.words[index]}`
+          )
+        } else {
+          return(
+            `${string}`
+          )
+        }
       })}
       </>
     )
