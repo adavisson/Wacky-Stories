@@ -3,7 +3,8 @@ import Template from './Template';
 
 class TemplateForm extends Component {
   state = {
-    value: null
+    value: null,
+    isSubmitted: false
   }
 
   handleChange = event => {
@@ -12,14 +13,22 @@ class TemplateForm extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    console.log(this.state.value);
+    if (this.state.value){
+      this.setState({
+        isSubmitted: true
+      })
+    }
+  }
+
+  renderTemplate = () => {
+    return <Template template_id={this.state.value} />
   }
 
   render() { 
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Select Template:
+          <label>Select Template: &nbsp;
             <select value={this.state.value} onChange={this.handleChange}>
               <option value="null">Select</option>
               {this.props.templates.map(template => <option value={template.id}>{template.title}</option>)}
@@ -28,6 +37,7 @@ class TemplateForm extends Component {
           <br/>
           <input type="submit" value="Submit" className="btn btn-primary" />
         </form>
+        {this.state.isSubmitted && this.renderTemplate()}
       </div>
     );
   }

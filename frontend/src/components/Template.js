@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 const Template = (props) => {
   return (
     <div>
-      {console.log(props.template)}
-      {/* <h2>{props.template.title}</h2> */}
+      {/* {console.log(props.template_id)} */}
+      <h2>{props.template_id}</h2>
     </div>
   );
 }
