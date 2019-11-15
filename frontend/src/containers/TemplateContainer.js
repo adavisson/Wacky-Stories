@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Template from '../components/Template';
+// import Template from '../components/Template';
 import TemplateForm from '../components/TemplateForm';
 import { connect } from 'react-redux';
 import { fetchTemplates } from '../actions/fetchTemplates';
