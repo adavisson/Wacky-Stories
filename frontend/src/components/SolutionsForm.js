@@ -45,7 +45,7 @@ class SolutionsForm extends Component {
   renderStory = () => {
     return (
       <div>
-        <h2>Story</h2>
+        <h2>{this.state.value}</h2>
         <button className="btn btn-link" onClick={this.handleButton}>Select Another Solution</button>
       </div>
     )
