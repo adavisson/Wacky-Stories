@@ -53,3 +53,24 @@ Template.create(title: 'Double Life', story: [
     'pet',
     'name'
   ])
+
+Template.create(title: 'Overcoming Fear', story: [
+    'There was an old man that lived in ',
+    '. He did not like to go outside because he was afraid of the ',
+    '. One day he really needed a ',
+    ', so he braved the walk to the ',
+    '. On his way he encountered a ',
+    ', and was very ',
+    '. He decided the best way to handle the situation was to name his fear ',
+    '. They quickly became best buds and spend every day doing ',
+    '. The End.'
+  ], hints: [
+    'place',
+    'animals',
+    'grocery item',
+    'place',
+    'animal from above',
+    'feeling',
+    'name',
+    'activity'
+  ])
