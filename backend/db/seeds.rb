@@ -74,3 +74,14 @@ Template.create(title: 'Overcoming Fear', story: [
     'name',
     'activity'
   ])
+
+Solution.create(title: 'Scary Foxes', template_id: 5, words: [
+    'Mount Everest',
+    'foxes',
+    'tortilla chips',
+    "Kara's House",
+    'fox',
+    'flabbergasted',
+    'Buddy',
+    'triathlons'
+  ])
