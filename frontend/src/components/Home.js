@@ -2,7 +2,11 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <h2>Home Page</h2>
+    <div className="story">
+      <h2>Wacky Stories</h2>
+      <p>Welcome to Wacky Stories! Click <a href="/templates">here</a> to create a new story,
+        or click <a href="/saved-stories">here</a> to select a saved story.</p>
+    </div>
   );
 }
  
