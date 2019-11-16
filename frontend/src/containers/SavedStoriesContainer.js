@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import SolutionsForm from '../components/SolutionsForm';
 import { connect } from 'react-redux';
 import { fetchSolutions } from '../actions/fetchSolutions';
+import { fetchTemplates } from '../actions/fetchTemplates';
 
 class SavedStoriesContainer extends Component {
   
   componentDidMount() {
+    //get Templates and Solutions
+    this.props.fetchTemplates();
     this.props.fetchSolutions();
   }
 
   render() { 
     return (
       <div>
-        <SolutionsForm solutions={this.props.solutions} />
+        <SolutionsForm templates={this.props.templates} solutions={this.props.solutions} />
       </div>
     );
   }
@@ -27,7 +30,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSolutions: () => dispatch(fetchSolutions())
+    fetchSolutions: () => dispatch(fetchSolutions()),
+    fetchTemplates: () => dispatch(fetchTemplates())
   }
 }
  
