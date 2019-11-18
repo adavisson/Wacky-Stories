@@ -8,7 +8,6 @@ export const postSolution = (solution) => {
       },
       body: JSON.stringify(solution)
     }
-    console.log(configObject);
     fetch('http://localhost:3001/solutions', configObject)
       .then(resp => resp.json())
       .then(solution => {

@@ -80,11 +80,9 @@ class Template extends Component {
   render() {
     return (
       <div>
-        {/* {console.log(props.template)} */}
         <h2>{this.props.template.title}</h2>
         {!this.state.isSubmitted && this.renderForm()}
         {this.state.isSubmitted && this.renderStory()}
-        {console.log(this.state)}
         <br />
       </div>
     );

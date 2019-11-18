@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 class Story extends Component {
   renderStory = () => {
-    console.log(this.props)
     return(
       <>
       {this.props.template.story.map((string, index) => {
