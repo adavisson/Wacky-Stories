@@ -58,8 +58,6 @@ class SolutionsForm extends Component {
         temp = template;
       }
     })
-    console.log(temp)
-    console.log(sol)
 
     return (
       <div>
@@ -71,8 +69,6 @@ class SolutionsForm extends Component {
   }
 
   render() { 
-    console.log(this.props.solutions)
-    console.log(this.props.templates)
     return (
       <div>
         <h2>Saved Stories</h2>
