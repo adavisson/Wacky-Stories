@@ -21,6 +21,10 @@ class Template extends Component {
      })
   };
 
+  handleSave = () => {
+    alert("Saved!");
+  }
+
   renderForm = () => {
     return (
       <form className="form-div" onSubmit={this.handleSubmit}>
@@ -44,13 +48,23 @@ class Template extends Component {
     );
   };
 
+  renderStory = () => {
+    return(
+      <>
+        <Story words={Object.values(this.state.values)} template={this.props.template} />
+        <br/>
+        <button className="btn btn-primary" onClick={this.handleSave}>Save Story</button>
+      </>
+    )
+  }
+
   render() {
     return (
       <div>
         {/* {console.log(props.template)} */}
         <h2>{this.props.template.title}</h2>
         {!this.state.isSubmitted && this.renderForm()}
-        {this.state.isSubmitted && <Story words={Object.values(this.state.values)} template={this.props.template} />}
+        {this.state.isSubmitted && this.renderStory()}
         {console.log(this.state)}
         <br />
       </div>
