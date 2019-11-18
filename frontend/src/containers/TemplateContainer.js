@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import TemplateForm from '../components/TemplateForm';
 import { connect } from 'react-redux';
 import { fetchTemplates } from '../actions/fetchTemplates';
+import { postSolution } from '../actions/postSolution';
 
 class TemplateContainer extends Component {
 
@@ -29,7 +30,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchTemplates: () => dispatch(fetchTemplates())
+    fetchTemplates: () => dispatch(fetchTemplates()),
+    postSolution: () => dispatch(postSolution())
   }
 }
  

@@ -28,6 +28,13 @@ const templatesReducer = (state = { templates: [], solutions: [], loading: false
         solutions: action.solutions,
         loading: false
       }
+    case 'BUILDING_SOLUTION':
+      return {
+        ...state,
+        templates: [...state.templates],
+        solutions: [...state.solutions],
+        loading: true
+      }
     default:
       return state;
   }
