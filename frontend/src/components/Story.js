@@ -10,6 +10,10 @@ class Story extends Component {
           return(
             `${string}` + `${this.props.words[index]}`
           )
+        } else if (!string && this.props.words[index]){
+          return(
+            `${this.props.words[index]}`
+          )
         } else {
           return(
             `${string}`
