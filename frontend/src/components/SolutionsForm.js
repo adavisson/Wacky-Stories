@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Story from './Story';
 
 class SolutionsForm extends Component {
   state = {
@@ -43,9 +44,27 @@ class SolutionsForm extends Component {
   }
 
   renderStory = () => {
+    let temp = null;
+    let sol = null;
+
+    this.props.solutions.forEach(solution => {
+      if(solution.id == this.state.value){
+        sol = solution;
+      }
+    })
+
+    this.props.templates.forEach(template => {
+      if(template.id == sol.template_id){
+        temp = template;
+      }
+    })
+    console.log(temp)
+    console.log(sol)
+
     return (
       <div>
-        <h2>{this.state.value}</h2>
+        <Story template={temp} words={sol.words} />
+        <br/>
         <button className="btn btn-link" onClick={this.handleButton}>Select Another Solution</button>
       </div>
     )
@@ -53,6 +72,7 @@ class SolutionsForm extends Component {
 
   render() { 
     console.log(this.props.solutions)
+    console.log(this.props.templates)
     return (
       <div>
         <h2>Saved Stories</h2>

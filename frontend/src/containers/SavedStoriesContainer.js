@@ -23,6 +23,7 @@ class SavedStoriesContainer extends Component {
 
 const mapStateToProps = state => {
   return {
+    templates: state.templates,
     solutions: state.solutions,
     loading: state.loading
   }
