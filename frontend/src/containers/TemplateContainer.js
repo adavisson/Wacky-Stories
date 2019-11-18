@@ -15,7 +15,6 @@ class TemplateContainer extends Component {
     return (
       <div>
         <TemplateForm templates={this.props.templates} postSolution={this.props.postSolution} />
-        {/* <Template template={this.props.templates[0]} /> */}
       </div>
     );
   }
