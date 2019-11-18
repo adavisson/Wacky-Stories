@@ -3,6 +3,7 @@ import Story from './Story';
 
 class Template extends Component {
   state = {
+    title: "",
     isSubmitted: false,
     values: {}
   };
@@ -15,13 +16,19 @@ class Template extends Component {
   };
 
   handleChange = event => {
-    console.log(event.target.key)
      this.setState({
        values: {...this.state.values, [event.target.id]: event.target.value}
      })
   };
 
-  handleSave = () => {
+  handleTitleChange = event => {
+    this.setState({
+      title: [event.target.value]
+    })
+  }
+
+  handleSave = (event) => {
+    event.preventDefault();
     alert("Saved!");
   }
 
@@ -53,7 +60,13 @@ class Template extends Component {
       <>
         <Story words={Object.values(this.state.values)} template={this.props.template} />
         <br/>
-        <button className="btn btn-primary" onClick={this.handleSave}>Save Story</button>
+        <form className="form-div" onSubmit={this.handleSave}>
+          <div className="form-group">
+            <label>Title: </label>
+            <input type="text" className="form-control" value={this.state.title} onChange={this.handleTitleChange} required />
+          </div>
+          <input type="submit" value="Save Story" className="btn btn-primary" />
+        </form>
       </>
     )
   }
