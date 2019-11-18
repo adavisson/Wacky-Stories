@@ -3,7 +3,7 @@ import Story from './Story';
 
 class SolutionsForm extends Component {
   state = {
-    value: null,
+    value: "null",
     isSubmitted: false
   }
 

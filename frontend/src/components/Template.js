@@ -23,16 +23,16 @@ class Template extends Component {
 
   handleTitleChange = event => {
     this.setState({
-      title: [event.target.value]
+      title: event.target.value
     })
   }
 
   handleSave = (event) => {
     event.preventDefault();
     let solution = {
-      title: [this.state.title],
-      words: [this.state.values],
-      template_id: [this.props.template.id]
+      title: this.state.title,
+      words: Object.values(this.state.values),
+      template_id: this.props.template.id
     }
     this.props.postSolution(solution);
     alert("Saved!");

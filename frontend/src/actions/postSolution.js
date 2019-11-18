@@ -8,7 +8,8 @@ export const postSolution = (solution) => {
       },
       body: JSON.stringify(solution)
     }
-    fetch('http://localhost:3001/solutions')
+    console.log(configObject);
+    fetch('http://localhost:3001/solutions', configObject)
       .then(resp => resp.json())
       .then(solution => {
         dispatch({type: 'ADD_SOLUTION', solution: solution})
