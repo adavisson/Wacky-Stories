@@ -29,6 +29,12 @@ class Template extends Component {
 
   handleSave = (event) => {
     event.preventDefault();
+    let solution = {
+      title: [this.state.title],
+      words: [this.state.values],
+      template_id: [this.props.template.id]
+    }
+    this.props.postSolution(solution);
     alert("Saved!");
   }
 

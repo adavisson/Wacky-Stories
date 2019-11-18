@@ -14,7 +14,7 @@ class TemplateContainer extends Component {
   render() { 
     return (
       <div>
-        <TemplateForm templates={this.props.templates} />
+        <TemplateForm templates={this.props.templates} postSolution={this.props.postSolution} />
         {/* <Template template={this.props.templates[0]} /> */}
       </div>
     );
@@ -31,7 +31,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     fetchTemplates: () => dispatch(fetchTemplates()),
-    postSolution: () => dispatch(postSolution())
+    postSolution: (solution) => dispatch(postSolution(solution))
   }
 }
  

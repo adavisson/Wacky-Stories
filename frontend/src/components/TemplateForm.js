@@ -50,7 +50,7 @@ class TemplateForm extends Component {
     })
     return (
       <div className="template">
-        <Template template={template} />
+        <Template template={template} postSolution={this.props.postSolution} />
         <button className="btn btn-link" onClick={this.handleButton}>Select Another Template</button>
       </div>
     )
