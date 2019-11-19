@@ -26,3 +26,16 @@ Madlibs
 - What would routing look like?
 - Any tools for mapping out React component flow?
 - Look on Learn Instruct for react-router help
+
+
+template: Overcoming Fear
+Title: Australian Geese
+----------
+Australia
+geese
+egg
+McDonald's
+goose
+ecstatic
+Ron
+skiing

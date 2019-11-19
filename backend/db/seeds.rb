@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Template.create(title: 'Sibling Rivalry', story: [
+temp_1 = Template.create(title: 'Sibling Rivalry', story: [
     'There once was a young ',
     ' from ',
     '. They had ',
@@ -29,7 +29,7 @@ Template.create(title: 'Sibling Rivalry', story: [
     'movement'
   ]);
 
-Template.create(title: 'Double Life', story: [
+temp_2 = Template.create(title: 'Double Life', story: [
     '',
     ' was a ',
     ' by day, but a ',
@@ -54,10 +54,10 @@ Template.create(title: 'Double Life', story: [
     'name'
   ])
 
-Template.create(title: 'Overcoming Fear', story: [
+temp_3 = Template.create(title: 'Overcoming Fear', story: [
     'There was an old man that lived in ',
     '. He did not like to go outside because he was afraid of the ',
-    '. One day he really needed a ',
+    '. One day he really needed a(n) ',
     ', so he braved the walk to the ',
     '. On his way he encountered a ',
     ', and was very ',
@@ -75,7 +75,7 @@ Template.create(title: 'Overcoming Fear', story: [
     'activity'
   ])
 
-Solution.create(title: 'Scary Foxes', template_id: 5, words: [
+Solution.create(title: 'Scary Foxes', template_id: temp_3.id, words: [
     'Mount Everest',
     'foxes',
     'tortilla chips',
