@@ -61,8 +61,8 @@ Template.create(title: 'Overcoming Fear', story: [
     ', so he braved the walk to the ',
     '. On his way he encountered a ',
     ', and was very ',
-    '. He decided the best way to handle the situation was to name his fear ',
-    '. They quickly became best buds and spend every day doing ',
+    '. He decided the best way to handle the situation was to name it ',
+    '. They quickly became best buds and spend every day ',
     '. The End.'
   ], hints: [
     'place',
