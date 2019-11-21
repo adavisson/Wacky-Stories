@@ -1,5 +1,5 @@
 # Wacky-Stories
-This application mimics Mad Libs. A user picks a template, is presented with word hints, fills in the blanks, and is then presented with a story.
+This application mimics Mad Libs. A user picks a template, is presented with word hints, fills in the blanks, and is then presented with a story. A demo can be found here: https://youtu.be/biEEPnVeMTE
 
 # Template Notes
 - Templates are objects with keys of 'title', 'story', 'hints'
