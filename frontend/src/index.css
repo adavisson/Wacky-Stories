@@ -34,16 +34,24 @@ form {
 .story {
   display: inline-block;
   width: 65%;
+  border: 3px solid #ffa07a;
+  border-radius: 20px;
+  padding: 10px;
 }
 
 .navbar {
   background-color: lightsalmon;
   font-weight: bold;
+  margin-bottom: 15px;
 }
 
 .btn-primary {
   background-color: lightsalmon;
   color: black;
   font-weight: bold;
+  border-color: lightsalmon;
+}
+
+.form-control {
   border-color: lightsalmon;
 }
