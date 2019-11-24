@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Story from './Story';
+import { Form, Button } from 'react-bootstrap';
 
 class SolutionsForm extends Component {
   state = {
@@ -30,16 +31,18 @@ class SolutionsForm extends Component {
 
   renderForm = () => {
     return (
-      <form className="solutionsForm" onSubmit={this.handleSubmit}>
-        <label>Select Solution: &nbsp;
-          <select value={this.state.value} onChange={this.handleChange}>
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Group controlId="formBasicSelect">
+          <Form.Label>Select Solution:</Form.Label>
+          <Form.Control as="select" value={this.state.value} onChange={this.handleChange}>
             <option value="null">Select</option>
             {this.props.solutions.map(solution => <option value={solution.id}>{solution.title}</option>)}
-          </select>
-        </label>
-        <br/>
-        <input type="submit" value="Submit" className="btn btn-primary" />
-      </form>
+          </Form.Control>
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     )
   }
 
