@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Template from './Template';
+import { Form, Button } from 'react-bootstrap';
 
 class TemplateForm extends Component {
   state = {
@@ -28,16 +29,18 @@ class TemplateForm extends Component {
 
   renderForm = () => {
     return (
-      <form className="templateForm" onSubmit={this.handleSubmit}>
-        <label>Select Template: &nbsp;
-          <select value={this.state.value} onChange={this.handleChange}>
+      <Form onSubmit={this.handleSubmit}>
+        <Form.Group controlId="formBasicSelect">
+          <Form.Label>Select Template:</Form.Label>
+          <Form.Control as="select" onChange={this.handleChange}>
             <option value="null">Select</option>
             {this.props.templates.map(template => <option value={template.id}>{template.title}</option>)}
-          </select>
-        </label>
-        <br/>
-        <input type="submit" value="Submit" className="btn btn-primary" />
-      </form>
+          </Form.Control>
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     );
   }
 
