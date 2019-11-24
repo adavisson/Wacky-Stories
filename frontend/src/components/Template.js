@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Story from './Story';
+import { Form, Button } from 'react-bootstrap';
 
 class Template extends Component {
   state = {
@@ -40,24 +41,19 @@ class Template extends Component {
 
   renderForm = () => {
     return (
-      <form className="form-div" onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit}>
         {this.props.template.hints.map((hint, index) => {
           return (
-            <div className="form-group">
-              <label>{hint} &nbsp;</label>
-              <input
-                className="form-control"
-                id={`word_${index}`}
-                type="text"
-                value={this.state.values[index]}
-                onChange={this.handleChange}
-                required
-              />
-            </div>
-          );
+            <Form.Group>
+              <Form.Label>{hint}</Form.Label>
+              <Form.Control type="text" id={`word_${index}`} value={this.state.values[index]} onChange={this.handleChange} required/>
+            </Form.Group>
+          )
         })}
-        <input type="submit" value="Submit" className="btn btn-primary" />
-      </form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
     );
   };
 
