@@ -62,13 +62,15 @@ class Template extends Component {
       <>
         <Story words={Object.values(this.state.values)} template={this.props.template} />
         <br/>
-        <form className="form-div" onSubmit={this.handleSave}>
-          <div className="form-group">
-            <label>Title: </label>
-            <input type="text" className="form-control" value={this.state.title} onChange={this.handleTitleChange} required />
-          </div>
-          <input type="submit" value="Save Story" className="btn btn-primary" />
-        </form>
+        <Form onSubmit={this.handleSave}>
+          <Form.Group>
+            <Form.Label>Title:</Form.Label>
+            <Form.Control type="text" value={this.state.title} onChange={this.handleTitleChange} required />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Save Story
+          </Button>
+        </Form>
       </>
     )
   }
