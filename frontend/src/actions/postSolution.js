@@ -1,4 +1,5 @@
-export const postSolution = (solution) => {
+export const postSolution = (solution) => {  // acbd  
+  console.log('C');
   return dispatch => {
     dispatch({type: 'BUILDING_SOLUTION'});
     let configObject = {
@@ -11,9 +12,11 @@ export const postSolution = (solution) => {
     fetch('http://localhost:3001/solutions', configObject)
       .then(resp => resp.json())
       .then(solution => {
+        console.log('D');
         dispatch({type: 'ADD_SOLUTION', solution: solution})
       })
   };
+  console.log('E');
 }
 
 

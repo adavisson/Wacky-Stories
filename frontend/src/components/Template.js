@@ -35,7 +35,9 @@ class Template extends Component {
       words: Object.values(this.state.values),
       template_id: this.props.template.id
     }
+    console.log('A');
     this.props.postSolution(solution);
+    console.log('B');
     alert("Saved!");
   }
 
